@@ -9,51 +9,49 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* NAV */
 nav {
-    background-color: #2767d9;
-    padding: 10px 30px;
+    background: linear-gradient(to bottom, #2767d9, #04a5da);
+    padding: 10px 20px;
     border-bottom: 3px solid #2767d9;
-    background: linear-gradient(to bottom,  #2767d9, #04a5da );
 }
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
+    /* permite quebrar no mobile */
     align-items: center;
+    justify-content: center;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
 }
 
 nav li {
     list-style: none;
 }
-.central-banner {
-    width: 100%;
-    border-bottom: 5px solid #2767d9;
-}
 
 #logo {
-    height: 100%;
-    width: 300px;
+    width: 180px;
+    max-width: 100%;
 }
 
+/* FORM DE BUSCA */
 form {
     display: flex;
     align-items: center;
     gap: 5px;
-    padding-left: 200px;
 }
 
 #barra {
-    display: flex;
-    align-items: center;
     border: 2px solid #cbdad5;
     border-radius: 10px 1px 1px 10px;
     padding-left: 10px;
-    gap: 30px;
-    height: 50px;
-    width: 500px;
+    height: 40px;
+    width: 250px;
+    max-width: 100%;
     font-size: 16px;
     transition: all 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #barra:hover {
@@ -62,8 +60,8 @@ form {
 }
 
 #barra-button {
-    height: 50px;
-    width: 60px;
+    height: 40px;
+    width: 50px;
     border-radius: 1px 10px 10px 1px;
     border: 2px solid #cbdad5;
     background: url("./img/lupaicon.jpeg") no-repeat center center;
@@ -71,17 +69,18 @@ form {
     text-indent: -9999px;
     transition: all 0.2s;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #barra-button:hover {
     border-color: #89a7b1;
 }
 
+/* LINKS NAV */
 nav a {
-    display: flex;
     text-decoration: none;
     color: #cbdad5;
-    font-size: 20px;
+    font-size: 18px;
     transition: all 0.3s ease;
 }
 
@@ -89,82 +88,70 @@ nav a:hover {
     color: #89a7b1;
 }
 
-#center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    color: white;
-    font-size: 24px;
+/* BANNER CENTRAL */
+.central-banner {
+    width: 100%;
+    border-bottom: 5px solid #2767d9;
 }
 
+/* CONTEÚDO GERAL */
 #banner-center {
     display: flex;
     justify-content: center;
+    padding: 30px 10px;
+}
+
+.banner-text {
+    display: flex;
+    text-align: center;
+    color: white;
+    font-size: 40px;
     align-items: center;
-    padding: 20px 0;
+}
+
+.title-banner {
+    display: flex;
+    text-align: center;
+    font-size: 50px;
+    color: white;
 }
 
 .banners-geral {
     display: flex;
     flex-wrap: wrap;
+    /* se não couber, quebra linha */
     justify-content: center;
+    /* centraliza no meio */
     gap: 20px;
+    /* espaço entre os banners */
     background-color: #04a5da;
-    border-top: 2px solid#2767d9;
+    border-top: 2px solid #2767d9;
     border-radius: 20px;
-    padding: 20px;
-    height: 35%;
-    width: 70%;
-    position: fixed;
-    top: 60%;
-    margin-bottom: 700px;
-    padding-bottom: 60px;
-
+    padding: 10px;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #04a5da;
+    flex: 1 1 250px;
+    /* cresce mas respeita mínimo de 250px */
+    max-width: 280px;
+    /* não passa disso */
+    background-color: #2767d9;
     border-radius: 20px;
-    width: 20%;
-    padding: 20px;
+    padding: 15px;
     color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .banner img {
     width: 100%;
-    height: 100%;
+    /* imagem ocupa todo o espaço disponível */
+    height: auto;
+    /* mantém proporção */
     border-radius: 15px;
-    margin-bottom: 15px;
-    padding: 10px;
-}
-
-.banner-text {
-    text-align: center;
-    font-size: 18px;
-    height: 30%;
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-.title-banner {
-    font-size: 20px;
-    padding: 10px;
-}
-
-#banner-bottom  {
-    background: linear-gradient(to bottom, #4e87ff, #2767d9);
-    height: 50px;
-    display: flex;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 30px;
-    position: absolute;
-    bottom: auto;
+    /* deixa arredondado */
+    display: block;
+    /* impede espaços estranhos */
 }
