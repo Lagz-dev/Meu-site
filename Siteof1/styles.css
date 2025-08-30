@@ -193,3 +193,7 @@ footer a {
 footer a:hover {
     color: #89a7b1;
 }
+
+footer p {
+    cursor: default;
+}
