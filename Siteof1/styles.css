@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,7 @@
 body {
     background-color: #04a5da;
     font-family: Arial, sans-serif;
+    font-family: "Vend Sans", sans-serif;
 }
 
 /* NAV */
@@ -102,11 +105,13 @@ nav a:hover {
 }
 
 .banner-text {
+    padding-top: 20px;
     display: flex;
     text-align: center;
     color: white;
-    font-size: 40px;
+    font-size: 30px;
     align-items: center;
+    font-style: normal;
 }
 
 .title-banner {
@@ -125,7 +130,6 @@ nav a:hover {
     gap: 20px;
     /* espaço entre os banners */
     background-color: #04a5da;
-    border-top: 2px solid #2767d9;
     border-radius: 20px;
     padding: 10px;
     max-width: 1200px;
@@ -154,4 +158,38 @@ nav a:hover {
     /* deixa arredondado */
     display: block;
     /* impede espaços estranhos */
+}
+
+/* Faz o body ocupar 100% da tela e organiza com flex */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Conteúdo cresce e empurra o footer para baixo */
+body>*:not(footer) {
+    flex: 1;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #2767d9;
+    color: #cbdad5;
+    text-align: center;
+    padding: 15px 10px;
+    border-top: 3px solid #04a5da;
+    font-size: 14px;
+}
+
+footer a {
+    color: #cbdad5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #89a7b1;
 }
