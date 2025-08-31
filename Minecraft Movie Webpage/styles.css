@@ -15,7 +15,7 @@
 }
 
 body {
-    background-color: #101f0d;
+    background-color: #001900;
 }
 
 .header {
@@ -65,7 +65,6 @@ ul {
     justify-content: space-between;
     background-color: transparent;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 li {
@@ -98,11 +97,12 @@ li:hover {
 }
 
 #banner {
-    background-image: url("https://wallpapers.com/images/hd/minecraft-forest-wall-bridge-8nwqlzr0b5hcm133.webp");
+    background-image: url("https://3dvf.com/wp-content/uploads/2025/04/minecraft-movie-special-effect-x-2.jpg");
     background-position: 50% 50%;
     background-size: cover;
     width: 100%;
-    height: 500px;
+    height: 600px;
+    margin-top: 100px;
 }
 
 #trailer-container {
@@ -117,8 +117,8 @@ li:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
-    background-color: #363636;
+    margin-top: 50px;
+    background-color: #0a2c07;
     border-radius: 5px;
     padding: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -127,6 +127,7 @@ li:hover {
 .trailer {
     width: 50%;
     border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #sinopse {
@@ -167,4 +168,95 @@ li:hover {
 
 .button:hover {
     background-color: #3f7b32;
+}
+
+.actor-cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+}
+
+.cards-content {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+
+}
+
+.card {
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: whitesmoke;
+    font-size: 17px;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.banner-1 {
+    background-image: url('https://people.com/thmb/H8mq-k07JBx_WNmGiSr35uZTdXg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(790x343:792x345)/jack-black-minecraft-043025-76a3756353d74fc5bca2c43cdc31fda6.jpg');
+}
+
+.banner-2 {
+    background-image: url('https://cdn.theplaylist.net/wp-content/uploads/2016/04/05125702/Jason-Momoa-Minecraft.jpg');
+}
+
+.banner-3 {
+    background-image: url('https://preview.redd.it/in-a-minecraft-movie-2025-emma-myers-plays-natalie-who-acts-v0-6o069zk9f3ue1.jpeg?auto=webp&s=9005d598e75f781890ff1f890acf6a1498077b16');
+}
+
+.banner-4 {
+    background-image: url('https://www.hleatherjackets.com/wp-content/uploads/2024/09/Sebastian-Eugene-Hansen-A-Minecraft-Movie-Red-Hoodie.jpg');
+}
+
+footer {
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #0a2c07;
+    background-image: url('./img/Fundodemadeira.jpg');
+}
+
+
+span {
+    color: black;
+    font-family: "Press Start 2p", sistem-ui;
+    cursor: default;
+    font-weight: bold;
+    margin-bottom: 20px
+}
+
+#a-insta {
+    transition: 0.8s;
+    color: black;
+}
+
+.footer-navigation {
+    display: none;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
