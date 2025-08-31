@@ -8,18 +8,24 @@
     /* Margem de espaço de fora = 0 */
     padding: 0;
     /* Espaçamento dos objetos do interior = 0 */
-    background-color: white;
-    /* Cor de fundo = Branco */
     list-style: none;
     /*Estilo da lista = Nenhuma */
     text-decoration: none;
     /* Decoração dos texto = nenhuma */
 }
 
+body {
+    background-color: #101f0d;
+}
+
+.header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 header {
-    background-color: #1a1f1e;
+    margin-bottom: 30px;
     /* Cor de fundo = Branco */
-    height: 90px;
+    height: 100px;
     /* Altura = 90 pixels */
     display: flex;
     /* Conteúdo = Flexível */
@@ -27,16 +33,28 @@ header {
     /* Conteúdo = Espaço entre os itens */
     align-items: center;
     /* Alinhamento dos itens = Centro */
+    background-color: rgba(24, 24, 24, 0.6);
+    /* fundo preto semi-transparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* BLUR */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(1px);
+    /* compatibilidade com Safari */
 }
 
 nav {
     width: 60%;
     /* Largura = 60% */
-    background-color: #1a1f1e;
+    background-color: transparent;
 }
 
 #logo {
-    background-color: #1a1f1e;
+    background-color: transparent;
     height: auto;
     width: 20%;
 }
@@ -45,7 +63,7 @@ ul {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    background-color: #1a1f1e;
+    background-color: transparent;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -53,10 +71,10 @@ ul {
 li {
     list-style: none;
     color: white;
-    background-color: #1a1f1e;
+    background-color: transparent;
     cursor: pointer;
-    font-size: 22px;
-    transition: .5s;
+    font-size: 16px;
+    transition: .2s;
     font-family: "Kdam Thmor Pro", sans-serif;
 }
 
@@ -67,9 +85,9 @@ li:hover {
 #lupa-icon {
     background-image: url(./img/lupa.png);
     background-size: cover;
-    width: 34px;
-    height: 34px;
-    background-color: #1a1f1e;
+    width: 24px;
+    height: 24px;
+    background-color: #181818;
     transition: 0.3s;
     border: none;
 }
@@ -78,11 +96,70 @@ li:hover {
     cursor: pointer;
 }
 
-
 #banner {
     background-image: url("https://wallpapers.com/images/hd/minecraft-forest-wall-bridge-8nwqlzr0b5hcm133.webp");
     background-position: 50% 50%;
     background-size: cover;
     width: 100%;
     height: 500px;
+}
+
+#trailer-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+#content {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.trailer {
+    width: 60%;
+    border-radius: 5px;
+}
+
+#sinopse {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.description {
+    color: white;
+    font-size: 25px;
+    font-family: "Pixelify Sans", sans-serif;
+    width: 100%;
+}
+
+.button {
+    width: 200px;
+    height: 60px;
+    background-color: #2f5c26;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 16px;
+    font-family: "Press Start 2p", system-ui;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-top: 25px;
+}
+
+.button:hover {
+    background-color: #3f7b32;
 }
