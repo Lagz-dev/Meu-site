@@ -53,16 +53,6 @@ li:hover {
     color: #70bc5e;
 }
 
-#lupa-icon {
-    background-image: url(./img/lupa.png);
-    background-size: cover;
-    width: 24px;
-    height: 24px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
 /* Banner */
 #banner {
     background-image: url("https://3dvf.com/wp-content/uploads/2025/04/minecraft-movie-special-effect-x-2.jpg");
@@ -104,8 +94,9 @@ li:hover {
 
 .description {
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     font-family: "Pixelify Sans", sans-serif;
+    width: 80%;
 }
 
 .button {
@@ -155,6 +146,7 @@ li:hover {
     font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -197,6 +189,11 @@ footer span {
 }
 
 #a-insta {
+    color: white;
+    transition: 0.5s;
+}
+
+#a-insta:hover {
     color: #70bc5e;
 }
 
@@ -204,6 +201,11 @@ footer span {
 @media(max-width: 768px) {
     nav ul {
         display: none;
+    }
+
+    .description {
+        font-size: 25px;
+        width: 100%;
     }
 
     #banner {
