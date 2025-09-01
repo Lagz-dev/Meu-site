@@ -1,80 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&family=Kdam+Thmor+Pro&display=swap');
 
 * {
     margin: 0;
-    /* Margem de espaço de fora = 0 */
     padding: 0;
-    /* Espaçamento dos objetos do interior = 0 */
+    box-sizing: border-box;
     list-style: none;
-    /*Estilo da lista = Nenhuma */
     text-decoration: none;
-    /* Decoração dos texto = nenhuma */
 }
 
 body {
     background-color: #001900;
+    font-family: "Pixelify Sans", sans-serif;
 }
 
-.header {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
+/* HEADER */
 header {
-    margin-bottom: 30px;
-    /* Cor de fundo = Branco */
-    height: 110px;
-    /* Altura = 90 pixels */
+    height: 90px;
     display: flex;
-    /* Conteúdo = Flexível */
-    justify-content: space-around;
-    /* Conteúdo = Espaço entre os itens */
+    justify-content: space-between;
     align-items: center;
-    /* Alinhamento dos itens = Centro */
+    padding: 0 20px;
     background-color: rgba(24, 24, 24, 0.6);
-    /* fundo preto semi-transparente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    /* BLUR */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(1px);
-    /* compatibilidade com Safari */
-}
-
-nav {
-    width: 60%;
-    /* Largura = 60% */
-    background-color: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #logo {
-    background-color: transparent;
+    width: 160px;
     height: auto;
-    width: 20%;
 }
 
-ul {
+nav ul {
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    background-color: transparent;
     gap: 20px;
+    align-items: center;
 }
 
 li {
-    list-style: none;
     color: white;
-    background-color: transparent;
+    font-size: 18px;
     cursor: pointer;
-    font-size: 19px;
-    transition: .2s;
     font-family: "Kdam Thmor Pro", sans-serif;
+    transition: 0.2s;
 }
 
 li:hover {
@@ -87,176 +59,177 @@ li:hover {
     width: 24px;
     height: 24px;
     background-color: transparent;
-    transition: 0.3s;
     border: none;
-    padding: 13px;
-}
-
-#lupa-icon:hover {
     cursor: pointer;
 }
 
+/* Banner */
 #banner {
     background-image: url("https://3dvf.com/wp-content/uploads/2025/04/minecraft-movie-special-effect-x-2.jpg");
-    background-position: 50% 50%;
     background-size: cover;
+    background-position: center;
     width: 100%;
-    height: 600px;
-    margin-top: 100px;
+    height: 500px;
+    margin-top: 90px;
 }
 
+/* Trailer + Sinopse */
 #trailer-container {
     width: 100%;
-    height: 400px;
     display: flex;
     justify-content: center;
+    margin-top: 40px;
 }
 
 #content {
-    width: 60%;
+    width: 80%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-top: 50px;
+    align-items: flex-start;
     background-color: #0a2c07;
-    border-radius: 5px;
-    padding: 50px;
+    border-radius: 8px;
+    padding: 30px;
+    gap: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .trailer {
     width: 50%;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #sinopse {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 30px;
 }
 
 .description {
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     font-family: "Pixelify Sans", sans-serif;
-    width: 80%;
 }
 
 .button {
-    width: 200px;
-    height: 60px;
+    width: 100%;
+    max-width: 220px;
+    height: 55px;
     background-color: #2f5c26;
     color: white;
-    padding: 8px 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: 0.5s;
-    font-size: 16px;
-    font-family: "Press Start 2p", system-ui;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    font-weight: bold;
+    font-size: 14px;
+    font-family: "Press Start 2P", sans-serif;
+    margin-top: 20px;
+    transition: 0.3s;
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    outline: none;
-    margin-top: 25px;
 }
 
 .button:hover {
     background-color: #3f7b32;
 }
 
+/* Cards de atores */
 .actor-cards-container {
-    width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 20px;
-
+    margin: 80px 0 40px;
 }
 
 .cards-content {
     width: 90%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 20px;
-    column-gap: 40px;
-
+    gap: 30px;
 }
 
 .card {
-    width: 100%;
-    height: 600px;
+    height: 500px;
     background-size: cover;
-    background-position: 50% 50%;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.5s;
+    background-position: center;
+    border-radius: 6px;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 0 20px 10px;
-    color: whitesmoke;
-    font-size: 17px;
+    align-items: flex-end;
+    padding: 15px;
+    color: white;
     font-family: "Kdam Thmor Pro", sans-serif;
+    font-size: 16px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
+/* Banners individuais */
 .banner-1 {
-    background-image: url('https://people.com/thmb/H8mq-k07JBx_WNmGiSr35uZTdXg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(790x343:792x345)/jack-black-minecraft-043025-76a3756353d74fc5bca2c43cdc31fda6.jpg');
+    background-image: url("https://people.com/thmb/H8mq-k07JBx_WNmGiSr35uZTdXg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(790x343:792x345)/jack-black-minecraft-043025-76a3756353d74fc5bca2c43cdc31fda6.jpg");
 }
 
 .banner-2 {
-    background-image: url('https://cdn.theplaylist.net/wp-content/uploads/2016/04/05125702/Jason-Momoa-Minecraft.jpg');
+    background-image: url("https://cdn.theplaylist.net/wp-content/uploads/2016/04/05125702/Jason-Momoa-Minecraft.jpg");
 }
 
 .banner-3 {
-    background-image: url('https://preview.redd.it/in-a-minecraft-movie-2025-emma-myers-plays-natalie-who-acts-v0-6o069zk9f3ue1.jpeg?auto=webp&s=9005d598e75f781890ff1f890acf6a1498077b16');
+    background-image: url("https://preview.redd.it/in-a-minecraft-movie-2025-emma-myers-plays-natalie-who-acts-v0-6o069zk9f3ue1.jpeg?auto=webp&s=9005d598e75f781890ff1f890acf6a1498077b16");
 }
 
 .banner-4 {
-    background-image: url('https://www.hleatherjackets.com/wp-content/uploads/2024/09/Sebastian-Eugene-Hansen-A-Minecraft-Movie-Red-Hoodie.jpg');
+    background-image: url("https://www.hleatherjackets.com/wp-content/uploads/2024/09/Sebastian-Eugene-Hansen-A-Minecraft-Movie-Red-Hoodie.jpg");
 }
 
+/* Footer */
 footer {
-    height: 200px;
-    margin-top: 50px;
+    margin-top: 60px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    background-color: #0a2c07;
-    background-image: url('./img/Fundodemadeira.jpg');
+    background-color: rgba(24, 24, 24, 0.7);
 }
 
-
-span {
-    color: black;
-    font-family: "Press Start 2p", sistem-ui;
-    cursor: default;
-    font-weight: bold;
-    margin-bottom: 20px
+footer span {
+    color: white;
+    font-size: 14px;
+    font-family: "Press Start 2P", sans-serif;
+    text-align: center;
+    margin-top: 10px;
 }
 
 #a-insta {
-    transition: 0.8s;
-    color: black;
+    color: #70bc5e;
 }
 
-.footer-navigation {
-    display: none;
-}
+/* RESPONSIVO */
+@media(max-width: 768px) {
+    nav ul {
+        display: none;
+    }
 
-.footer-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    #banner {
+        height: 300px;
+        background-position: top;
+    }
+
+    #content {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .trailer,
+    #sinopse {
+        width: 100%;
+    }
+
+    .cards-content {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 350px;
+    }
+
+    #logo {
+        width: 130px;
+    }
 }
