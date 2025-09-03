@@ -9,6 +9,9 @@
 body {
     background-color: #04a5da;
     font-family: "Vend Sans", sans-serif, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* NAV */
@@ -27,12 +30,8 @@ nav ul {
     gap: 15px;
 }
 
-nav li {
-    list-style: none;
-}
-
 #logo {
-    width: 150px;
+    width: clamp(100px, 15vw, 180px);
     max-width: 100%;
 }
 
@@ -48,9 +47,8 @@ form {
     border-radius: 10px 1px 1px 10px;
     padding-left: 10px;
     height: 40px;
-    width: 250px;
-    max-width: 100%;
-    font-size: 16px;
+    width: clamp(150px, 40vw, 250px);
+    font-size: clamp(14px, 2vw, 16px);
     transition: all 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -81,7 +79,7 @@ form {
 nav a {
     text-decoration: none;
     color: #cbdad5;
-    font-size: 18px;
+    font-size: clamp(14px, 2vw, 18px);
     transition: all 0.3s ease;
 }
 
@@ -95,28 +93,26 @@ nav a:hover {
     border-bottom: 5px solid #2767d9;
 }
 
-/* CONTEÚDO GERAL */
 #banner-center {
     display: flex;
     justify-content: center;
-    padding: 30px 10px;
+    padding: clamp(20px, 5vw, 40px) 10px;
     flex-wrap: wrap;
+    text-align: center;
 }
 
 .banner-text {
-    padding-top: 20px;
-    display: flex;
-    text-align: center;
     color: white;
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
+    font-size: clamp(18px, 3vw, 30px);
+    margin-bottom: 10px;
 }
 
 .title-banner {
-    text-align: center;
-    font-size: 50px;
     color: white;
+    font-size: clamp(28px, 6vw, 50px);
+    font-weight: bold;
+    margin: 10px 0;
+    line-height: 1.2;
 }
 
 /* BANNERS */
@@ -142,6 +138,11 @@ nav a:hover {
     color: white;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+.banner:hover {
+    transform: scale(1.03);
 }
 
 .banner img {
@@ -151,20 +152,6 @@ nav a:hover {
     display: block;
 }
 
-/* Faz o body ocupar 100% da tela e organiza com flex */
-html,
-body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Conteúdo cresce e empurra o footer para baixo */
-body>*:not(footer) {
-    flex: 1;
-}
-
 /* FOOTER */
 footer {
     background-color: #2767d9;
@@ -172,7 +159,8 @@ footer {
     text-align: center;
     padding: 15px 10px;
     border-top: 3px solid #04a5da;
-    font-size: 14px;
+    font-size: clamp(12px, 2vw, 14px);
+    margin-top: auto;
 }
 
 footer a {
@@ -187,74 +175,4 @@ footer a:hover {
 
 footer p {
     cursor: default;
-}
-
-/* 📱 AJUSTES MOBILE */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #logo {
-        width: 120px;
-    }
-
-    .banner-text {
-        font-size: 22px;
-    }
-
-    .title-banner {
-        font-size: 32px;
-    }
-
-    #barra {
-        width: 180px;
-        font-size: 14px;
-    }
-
-    #barra-button {
-        width: 40px;
-    }
-
-    .banner {
-        max-width: 100%;
-        flex: 1 1 100%;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 10px 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        padding: 8px;
-    }
-
-    nav a {
-        font-size: 16px;
-    }
-
-    .banner-text {
-        font-size: 18px;
-    }
-
-    .title-banner {
-        font-size: 26px;
-    }
-
-    #barra {
-        width: 150px;
-        height: 35px;
-    }
-
-    #barra-button {
-        height: 35px;
-    }
-
-    footer {
-        font-size: 11px;
-    }
 }
