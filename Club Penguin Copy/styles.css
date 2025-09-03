@@ -8,8 +8,7 @@
 
 body {
     background-color: #04a5da;
-    font-family: Arial, sans-serif;
-    font-family: "Vend Sans", sans-serif;
+    font-family: "Vend Sans", sans-serif, Arial, sans-serif;
 }
 
 /* NAV */
@@ -22,7 +21,6 @@ nav {
 nav ul {
     display: flex;
     flex-wrap: wrap;
-    /* permite quebrar no mobile */
     align-items: center;
     justify-content: center;
     list-style: none;
@@ -34,7 +32,7 @@ nav li {
 }
 
 #logo {
-    width: 180px;
+    width: 150px;
     max-width: 100%;
 }
 
@@ -102,6 +100,7 @@ nav a:hover {
     display: flex;
     justify-content: center;
     padding: 30px 10px;
+    flex-wrap: wrap;
 }
 
 .banner-text {
@@ -111,36 +110,32 @@ nav a:hover {
     color: white;
     font-size: 30px;
     align-items: center;
-    font-style: normal;
+    justify-content: center;
 }
 
 .title-banner {
-    display: flex;
     text-align: center;
     font-size: 50px;
     color: white;
 }
 
+/* BANNERS */
 .banners-geral {
     display: flex;
     flex-wrap: wrap;
-    /* se não couber, quebra linha */
     justify-content: center;
-    /* centraliza no meio */
     gap: 20px;
-    /* espaço entre os banners */
     background-color: #04a5da;
     border-radius: 20px;
     padding: 10px;
     max-width: 1200px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .banner {
     flex: 1 1 250px;
-    /* cresce mas respeita mínimo de 250px */
     max-width: 280px;
-    /* não passa disso */
     background-color: #2767d9;
     border-radius: 20px;
     padding: 15px;
@@ -151,13 +146,9 @@ nav a:hover {
 
 .banner img {
     width: 100%;
-    /* imagem ocupa todo o espaço disponível */
     height: auto;
-    /* mantém proporção */
     border-radius: 15px;
-    /* deixa arredondado */
     display: block;
-    /* impede espaços estranhos */
 }
 
 /* Faz o body ocupar 100% da tela e organiza com flex */
@@ -174,7 +165,7 @@ body>*:not(footer) {
     flex: 1;
 }
 
-/* Estilo do footer */
+/* FOOTER */
 footer {
     background-color: #2767d9;
     color: #cbdad5;
@@ -196,4 +187,74 @@ footer a:hover {
 
 footer p {
     cursor: default;
+}
+
+/* 📱 AJUSTES MOBILE */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #logo {
+        width: 120px;
+    }
+
+    .banner-text {
+        font-size: 22px;
+    }
+
+    .title-banner {
+        font-size: 32px;
+    }
+
+    #barra {
+        width: 180px;
+        font-size: 14px;
+    }
+
+    #barra-button {
+        width: 40px;
+    }
+
+    .banner {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 8px;
+    }
+
+    nav a {
+        font-size: 16px;
+    }
+
+    .banner-text {
+        font-size: 18px;
+    }
+
+    .title-banner {
+        font-size: 26px;
+    }
+
+    #barra {
+        width: 150px;
+        height: 35px;
+    }
+
+    #barra-button {
+        height: 35px;
+    }
+
+    footer {
+        font-size: 11px;
+    }
 }
